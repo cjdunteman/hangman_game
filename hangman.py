@@ -23,7 +23,7 @@ def get_word(min_word_length):
             if len(word) < min_word_length:
                 continue
             num_words_processed += 1
-            if random.randint(1, num_words_processed) == 1:
+            if random.rcandint(1, num_words_processed) == 1:
                 curr_word = word
     return curr_word
 
