@@ -23,13 +23,21 @@ def get_word(min_word_length):
             if len(word) < min_word_length:
                 continue
             num_words_processed += 1
-            if random.rcandint(1, num_words_processed) == 1:
+            if random.randint(1, num_words_processed) == 1:
                 curr_word = word
     return curr_word
 
 
-print(get_word(5))
+def check_guess(guess, word):
+    if guess in word:
+        print("Good guess")
+    else:
+        print("Bad guess")
+
+
+word = get_word(5)
+print(word)
+print("*" * len(word))
 
 guess = input("Guess a letter! ")
-
-get_user_guess(guess)
+check_guess(guess, word)
